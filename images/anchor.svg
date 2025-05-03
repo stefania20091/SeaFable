@@ -1,0 +1,30 @@
+<svg width="57" height="60" viewBox="0 0 57 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M38.5 51C38.5 49.5 63 39.5 38.5 47.5C14 55.5 38.5 11 38.5 11" stroke="white" stroke-width="3"/>
+<path d="M6.5531 34.7689C7.75105 33.8661 0.992933 8.28141 9.34832 32.6625C17.7037 57.0436 38.4985 10.6963 38.4985 10.6963" stroke="white" stroke-width="3"/>
+<path d="M40.5 1.5C43.2614 1.5 45.5 3.73858 45.5 6.5C45.5 9.26142 43.2614 11.5 40.5 11.5C37.7386 11.5 35.5 9.26142 35.5 6.5C35.5 3.73858 37.7386 1.5 40.5 1.5Z" stroke="white" stroke-width="3"/>
+<path d="M21.1168 23L39.6444 31.9445" stroke="white" stroke-width="3" stroke-linecap="round"/>
+<path d="M41.0333 50.1829C39.5333 51.5163 35.4333 54.1829 31.0333 54.1829C26.6333 54.1829 21.8666 52.8496 20.0333 52.1829" stroke="white"/>
+<path d="M5.65693 33.1989C5.73979 35.2041 6.66965 40.0058 9.72615 43.1709C12.7826 46.336 17.053 48.8387 18.8061 49.6943" stroke="white"/>
+<path d="M30.5 50.5C31.3333 52 31.7 54.8 26.5 54C21.3 53.2 14.6667 48 12 45.5" stroke="white"/>
+<path d="M10.5 44C14.1 47.6 18.3333 50.8333 20 52C20.8 52.4 21.3333 52.5 21.5 52.5" stroke="white"/>
+<path d="M17 51.5C8.60001 46.7 6.83334 39.1667 7 36" stroke="white"/>
+<path d="M15 50.5506C22.9003 56.135 30.4744 54.5524 33.274 53.0631" stroke="white"/>
+<ellipse cx="20" cy="45.5" rx="8" ry="6.5" fill="white"/>
+<ellipse cx="24" cy="39.5" rx="3" ry="3.5" fill="white"/>
+<ellipse cx="26.5" cy="35" rx="2.5" ry="3" fill="white"/>
+<ellipse cx="29.5" cy="51" rx="8.5" ry="4" fill="white"/>
+<ellipse cx="38" cy="50.5" rx="2" ry="1.5" fill="white"/>
+<ellipse cx="9.0555" cy="38.0291" rx="3" ry="7.4788" transform="rotate(-17 9.0555 38.0291)" fill="white"/>
+<ellipse cx="12.5" cy="43.5" rx="2.5" ry="4.5" fill="white"/>
+<ellipse cx="21.3542" cy="47.8142" rx="10.5489" ry="6.37152" transform="rotate(22 21.3542 47.8142)" fill="white"/>
+<path d="M5.88977 25.9611C5.22401 18.9044 8.07525 19.0851 9.58409 20.0576L4.36216 15.477" stroke="white" stroke-linecap="round"/>
+<path d="M5.00354 25.2795C4.28055 18.5173 1.67207 19.7081 0.667834 21.3806L4.36216 15.477" stroke="white" stroke-linecap="round"/>
+<path d="M4.53173 15.3712L8.03469 19.278L1.91757 19.9209L4.53173 15.3712Z" fill="white"/>
+<ellipse cx="4.5" cy="19.5" rx="2.5" ry="1.5" fill="white"/>
+<path d="M46.1429 46.8593C51.3595 42.0606 49.1197 40.287 47.3478 40.0001L54.2934 40.0902" stroke="white" stroke-linecap="round"/>
+<path d="M47.2576 46.9457C52.3197 42.4042 53.4614 45.0346 53.0886 46.9494L54.2934 40.0902" stroke="white" stroke-linecap="round"/>
+<path d="M54.2382 39.8981L49.0208 40.4575L53.1365 45.0284L54.2382 39.8981Z" fill="white"/>
+<ellipse cx="2.5" cy="1.5" rx="2.5" ry="1.5" transform="matrix(-0.743145 -0.669131 -0.669131 0.743145 54.3606 43.5458)" fill="white"/>
+<path d="M54.0458 40.0413L52.8832 45.505L48.4631 40.2374L54.0458 40.0413Z" fill="white"/>
+<ellipse cx="50.5" cy="43" rx="1.5" ry="2" fill="white"/>
+</svg>
