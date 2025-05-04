@@ -314,4 +314,100 @@ footer{
     margin-top: 80%;
     margin-left: 20%;
 }
-/*box-shadow: 0px 50px 220px rgba(0,0,0,0.62);*/
+.depth-content h1{
+    font-family: "Manrope", sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: #FFFFFF;
+    margin: 0;
+}
+.catalogue-bg{
+    position: relative;
+    background-image: url(images/secondbg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding: 110px 40px 70px 40px;
+    box-sizing: border-box;
+}
+.page-title{
+    display: flex;
+    font-family: "IMB Plex Mono", sans-serif;
+    font-size: 35px;
+    font-weight: 500;
+    color: #FFFFFF;
+    width: 100%;
+    justify-content: center;
+}
+.carousel-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.btn-prev{
+    position:relative;
+    margin-right: 15px;
+}
+.btn-next{
+    position:relative;
+    margin-left: 15px;
+}
+.carousel{
+    display: flex;
+    flex-direction: row;
+    width: 1200px;
+    gap: 30px;
+    overflow-x:auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+
+}
+.carousel-item{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    min-width: 350px;
+    height: 361px;
+    padding: 20px 35px 20px 35px;
+    background-color: rgba(217,217,217,0.07);
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.25);
+    align-items: center;
+    text-align: left;
+}
+.carousel-item::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(15px);
+    pointer-events: none;
+}
+.title{
+    font-family: "IMB Plex Mono", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgba(224,227,255,0.85);
+    width: 100%;
+    margin: 0 0 15px 0;
+    text-align: left;
+}
+.carousel-image{
+    width: 100%;
+    height: 222px;
+    scroll-snap-align: center;
+}
+.carousel-item p{
+    color: rgba(224,227,255,0.85);
+    margin: 0;
+    width: 100%;
+    text-align: left;
+    white-space: normal;
+}
+.carousel-item p:nth-of-type(1), .carousel-item p:nth-of-type(2){
+    margin-bottom: 7px;
+}
