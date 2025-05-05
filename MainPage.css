@@ -361,8 +361,11 @@ footer{
     gap: 30px;
     overflow-x:auto;
     overflow-y: hidden;
+    scrollbar-width: none;
     scroll-snap-type: x mandatory;
-
+}
+.carousel::-webkit-scrollbar {
+    display: none; 
 }
 .carousel-item{
     display: flex;
@@ -371,11 +374,19 @@ footer{
     min-width: 350px;
     height: 361px;
     padding: 20px 35px 20px 35px;
+    margin: 20px 0 20px 0;
     background-color: rgba(217,217,217,0.07);
     border-radius: 12px;
     border: 1px solid rgba(255,255,255,0.25);
     align-items: center;
     text-align: left;
+    transition: box-shadow 0.3s ease-in-out;
+}
+.carousel-item:first-child{
+    margin-left: 20px;
+}
+.carousel-item:last-child{
+    margin-right: 20px;
 }
 .carousel-item::before{
     content: "";
@@ -410,4 +421,31 @@ footer{
 }
 .carousel-item p:nth-of-type(1), .carousel-item p:nth-of-type(2){
     margin-bottom: 7px;
+}
+.carousel-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: rgba(224,227,255,0.85);
+    text-align: left;
+    padding: 30px 70px;
+    margin: 0 auto;
+}
+.carousel-description p{
+    font-family: "Manrope", sans-serif;
+    margin: 7px 50px 0 30px;
+    font-size: 22px;
+    font-weight: 500;
+}
+.carousel-description h1{
+    font-family: "IMB Plex Mono", sans-serif;
+    margin: 20px 50px 0 30px;
+    font-size: 26px;
+    font-weight: 600;
+}
+.line{
+    width: 1150px;
+    margin: 0 auto;
+    display: block;
 }
