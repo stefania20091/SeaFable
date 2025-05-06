@@ -196,6 +196,21 @@ nav a{
     background-color: rgba(187,195,237, 0.3);
     border-color: transparent;
 }
+.card-wrapper.move-right {
+    transform: translateX(300px); 
+}
+
+.card-wrapper.move-left {
+    transform: translateX(-300px); 
+}
+.card-wrapper {
+    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+    opacity: 0; 
+}
+.card-wrapper.show {
+    transform: translateX(0);
+    opacity: 1;
+}
 .card{
     width: 445px;
     height: 455px;
@@ -206,16 +221,11 @@ nav a{
     padding: 30px 30px;
     box-shadow: 0px 10px 18px rgba(0,0,0, 0.55);
 }
-.card:nth-of-type(1){
-    background-color: #131F35;
-    /*color: rgba(224,227,255,0.85)*/
+.card.dark-card {
+    background-color: #131F35; 
 }
-
-.card:nth-of-type(3){
-    background-color: #131F35;
-}
-.card:nth-of-type(1) p, .card:nth-of-type(3) p {
-    color: rgba(224,227,255,0.85);
+.card.dark-card p {
+    color: rgba(224, 227, 255, 0.85);
 }
 .card img{
     position: relative;
@@ -322,12 +332,13 @@ footer{
     margin: 0;
 }
 .catalogue-bg{
+    display: none;
     position: relative;
     background-image: url(images/secondbg.png);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 100%;
+    height: auto;
     overflow: hidden;
     padding: 110px 40px 70px 40px;
     box-sizing: border-box;
@@ -339,6 +350,7 @@ footer{
     font-weight: 500;
     color: #FFFFFF;
     width: 100%;
+    margin: 25px 0px 12px 0px;
     justify-content: center;
 }
 .carousel-div{
@@ -434,18 +446,40 @@ footer{
 }
 .carousel-description p{
     font-family: "Manrope", sans-serif;
-    margin: 7px 50px 0 30px;
+    margin: 7px 50px 40px 30px;
     font-size: 22px;
     font-weight: 500;
 }
 .carousel-description h1{
     font-family: "IMB Plex Mono", sans-serif;
-    margin: 20px 50px 0 30px;
+    margin: 20px 65px 0 30px;
     font-size: 26px;
     font-weight: 600;
 }
 .line{
-    width: 1150px;
-    margin: 0 auto;
-    display: block;
+    width: 100%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+}
+.line img{
+    width: 1190px;
+}
+.arrow img{
+    transition: all 0.4s ease-in-out;
+    margin-left: 3px;
+}
+.scale{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.scale img{
+    width: 1300px;
+}
+.depth-content h1{
+    font-family: "Manrope", sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    color: #FFFFFF;
 }
