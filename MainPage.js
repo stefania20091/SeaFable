@@ -7,21 +7,79 @@ const name = document.querySelector(".carousel-description h1");
 const arrow = document.querySelector(".arrow img")
 const scale = document.querySelector(".scale img")
 const cardWrappers = document.querySelectorAll(".card-wrapper");
-const mainPageButton = document.querySelector(".learn-more-btn");
+const mainPageButton = document.querySelectorAll(".learn-more-btn");
 const SecondPage = document.querySelector(".catalogue-bg");
 const FirstPage = document.querySelector(".main-part-bg");
 const BeginningWin = document.querySelector(".beginning");
+const catalogueLink = document.querySelector(".catalogue-page-link")
+const instaLink = document.querySelector(".link-inst")
+const copyLink = document.querySelector(".link-copy")
+const gmailLink = document.querySelector(".link-gmail")
+const popup = document.querySelector(".popup");
+const popupText = document.querySelector(".popup-text")
+
 
 const scrollAmount = 350;
 
-mainPageButton.addEventListener("click", () => {
-    FirstPage.style.display = "none";
-    BeginningWin.style.display = "none";
-    SecondPage.style.display = "block";
-    setTimeout(() => {
-        scrollToTop();
-    }, 0);
-})
+mainPageButton.forEach(button => {
+    button.addEventListener("click", () => {
+        SecondPage.style.display = "block";
+        FirstPage.style.display = "none";
+        BeginningWin.style.display = "none";
+
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+    });
+});
+
+instaLink.addEventListener("click", (event) => {
+    event.preventDefault();
+    window.open("https://www.instagram.com/", "_blank");
+});
+gmailLink.addEventListener("click", (event) => {
+    event.preventDefault();
+    window.open("https://accounts.google.com/InteractiveLogin?hl=ru&service=mail&ifkv=AaSxoQwaNW0eWg2ekYjflSsxcn5Rx6VUh2IdO7vJCqDr7gzBI0JpF5TvqegDRDP4UYCqRJ3I-CyDjA", "_blank");
+});
+copyLink.addEventListener("click", (event) => {
+    event.preventDefault();
+    const copytext = "123 456 78 90"
+    navigator.clipboard.writeText(copytext)
+        .then(() => {
+            popup.classList.add("active");
+            setTimeout(() => {
+                popup.classList.remove("active");
+            }, 3000);
+        })
+        .catch(err => {
+            popupText.textContent = "Failed to copy text";
+            popup.classList.add("active");
+            setTimeout(() => {
+                popup.classList.remove("active");
+            }, 3000);
+        });
+
+});
+
+document.addEventListener("click", (event) => {
+    const target = event.target;
+
+    if (target === catalogueLink) {
+        event.preventDefault(); 
+
+        SecondPage.style.display = "block";
+        FirstPage.style.display = "none";
+        BeginningWin.style.display = "none";
+
+        document.documentElement.scrollTop = 0; 
+        document.body.scrollTop = 0; 
+    }
+
+    if (target === ratingLink) {
+        event.preventDefault();
+
+        console.log("Натиснули на ratingLink");
+    }
+});
 
 btnPrev.addEventListener("click", () => {
     carousel.scrollBy({
