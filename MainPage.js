@@ -17,7 +17,9 @@ const copyLink = document.querySelector(".link-copy")
 const gmailLink = document.querySelector(".link-gmail")
 const popup = document.querySelector(".popup");
 const popupText = document.querySelector(".popup-text")
-
+const ratingItems = document.querySelectorAll('.rating-item')
+const firstRow = document.querySelector('.first-row')
+const secondRow = document.querySelector('.second-row')
 
 const scrollAmount = 350;
 
@@ -189,4 +191,36 @@ const observer = new IntersectionObserver((entries) => {
 
 cardWrappers.forEach(wrapper => {
     observer.observe(wrapper);
+});
+
+
+document.querySelectorAll('.rating-item').forEach(item => {
+    const firstRow = item.querySelector('.first-row');
+    const secondRow = item.querySelector('.second-row');
+
+    firstRow.addEventListener('click', () => {
+        if (!item.classList.contains('expanded')) {
+            secondRow.style.display = 'block';
+            secondRow.style.height = 'auto'; 
+            secondRow.style.paddingBottom = '5px';
+            const fullHeight = secondRow.offsetHeight; 
+            secondRow.style.height = '0'; 
+            secondRow.offsetHeight; 
+            secondRow.style.transition = 'height 0.5s ease-in-out';
+            secondRow.style.height = `${fullHeight}px`; 
+            item.classList.add('expanded');
+        } else {
+            secondRow.style.height = `${secondRow.offsetHeight}px`; 
+            secondRow.offsetHeight; 
+            secondRow.style.height = '0'; 
+            secondRow.style.paddingBottom = '0';
+            item.classList.remove('expanded');
+        }
+    });
+
+    secondRow.addEventListener('transitionend', () => {
+        if (!item.classList.contains('expanded')) {
+            secondRow.style.display = 'none';
+        }
+    });
 });
