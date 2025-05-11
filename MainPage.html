@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Встановлюємо основні мета-дані сторінки -->
     <meta charset="UTF-8">
+    <meta name="description" content="Dive into a world of fantasy and discover unique, imaginary sea creatures with detailed images and stories. Perfect for lovers of ocean myths and creativity.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/anchor.svg" type="image/svg">
+    <!-- Підключаємо CSS файл для стилізації -->
     <link rel="stylesheet" href="MainPage.css">
-    <title>SeaFable</title>
+    <title>Fantastic Ocean Creatures | Explore the Unknown Depths</title>
 </head>
 <body>
+    <!-- Створюємо навігацію сторінки -->
     <header>
         <div class="header-background"></div>
         <div class="header-content">
+            <!-- Логотип сайту -->
             <div class="logo">
                 <img src="images/anchor.svg">
                 <h1>SeaFable</h1>
             </div>
+            <!-- Меню навігації -->
             <nav>
                 <ul>
-                    <li><a href="#" class="about-page-link">About Us</a></li>
+                    <li><a href="#" class="contact-link">Contact Us</a></li>
                     <li><a href="#" class="rating-list-link">Rating</a></li>
                     <li><a href="#" class="catalogue-page-link">Catalogue</a></li>
                 </ul>
@@ -24,9 +31,13 @@
         </div>
     </header>
     <main>
+        <!-- Відображення спливаючого повідомлення -->
         <div class="popup">
             <div class="popup-text"> <p>Text copied</p></div>
         </div>
+        <!-- Анімація завантаження-->
+        <div class="loading-anim"></div>
+        <!-- Вітальна сторінка -->
         <div class="beginning">
             <div class="content">
                 <h1>Discover the Ocean’s Untold Stories</h1>
@@ -34,7 +45,9 @@
                 <button class="start-buttom">Dive In</button>
             </div>
         </div>
+        <!-- Основна частина сторінки з інформацією про риб -->
         <div class="main-part-bg">
+            <!-- Інформація про першу рибу -->
             <div class="fishes" id="fish1">
                 <div class="fish-info">
                     <h1>Features:</h1>
@@ -43,7 +56,7 @@
                     <h2>The Abyssal Tentafish can change the shade of its glow to blend with surrounding seaweed, luring prey directly into its waiting tentacles!</h2>
                     <button class="learn-more-btn">Learn More</button>
                 </div>
-                <div class="card-wrapper move-right id="wrapper1">
+                <div class="card-wrapper move-right">
                     <div class="card" id="card1">
                         <img src="images/fish1.webp">
                         <p><span class="bold">Name:</span> <span class="medium">Abyssal Tentafish</span></p>
@@ -53,10 +66,11 @@
                 </div>
             </div>
 
-            <img src="images/line.svg" class="lines" id="line1">
-    
+            <!-- Декоративна лінія -->
+            <img src="images/line.svg" class="lines">
+            <!-- Інформація про другу рибу -->
             <div class="fishes" id="fish2">
-                <div class="card-wrapper move-left" id="wrapper2"> 
+                <div class="card-wrapper move-left"> 
                     <div class="card dark-card" id="card2">
                         <img src="images/fish2.webp">
                         <p><span class="bold">Name:</span> <span class="medium">Spiralis Piscis</span></p>
@@ -72,8 +86,9 @@
                     <button class="learn-more-btn">Learn More</button>
                 </div>
             </div>
-            <img src="images/line.svg" class="lines" id="line2">
+            <img src="images/line.svg" class="lines">
 
+            <!-- Інформація про третю рибу -->
             <div class="fishes" id="fish3">
                 <div class="fish-info">
                     <h1>Features:</h1>
@@ -82,7 +97,7 @@
                     <h2>When attacked, Luminocetus Radiatus flashes a blinding light and swiftly changes direction, leaving predators confused.</h2>
                     <button class="learn-more-btn">Learn More</button>
                 </div>
-                <div class="card-wrapper move-right" id="wrapper3">
+                <div class="card-wrapper move-right">
                     <div class="card" id="card3">
                         <img src="images/fish3.webp">
                         <p><span class="bold">Name:</span> <span class="medium">Luminocetus Radiatus</span></p>
@@ -92,10 +107,11 @@
                 </div>
             </div>
 
-            <img src="images/line.svg" class="lines" id="line3">
+            <img src="images/line.svg" class="lines">
 
+            <!-- Інформація про четверту рибу -->
             <div class="fishes" id="fish4">
-                <div class="card-wrapper move-left" id="wrapper4">
+                <div class="card-wrapper move-left">
                     <div class="card dark-card" id="card4">
                         <img src="images/fish4.webp">
                         <p><span class="bold">Name:</span> <span class="medium">Abyssodraco Ferox</span></p>
@@ -112,7 +128,9 @@
                 </div>
             </div>
         </div>
+        <!-- Сторінка каталогу різних риб -->
         <div class="catalogue-bg">
+            <p class="page-title">Catalogue</p>
             <div class="depth-content">
                 <h1>Current Depth</h1>
                 <div class="depth-scale">
@@ -120,74 +138,74 @@
                     <div class="scale"> <img src="images/depth scale.svg"></div>
                 </div>
             </div>
-            <p class="page-title">Catalogue</p>
             <div class="carousel-div">
                 <img src="images/arrow-right.svg" class="btn-prev">
                 <div class="carousel">
-                    <div class="carousel-item" id="carousel-item1" data-depth="scale.width / 10.3" data-name="Venospina Ferrata" data-description="Venospina Ferrata is a venomous marine predator distinguished by its radial facial tendrils and needle-thin spines that jut from its head and dorsal ridge. These spines are not just for show — they are coated in a potent neurotoxin that paralyzes prey in seconds. With an explosive burst of speed, Venospina closes the distance to its target, stabs it with one of its barbs, and lets the venom do the rest. Victims often die before realizing they’ve been struck. Its hydrodynamic body and rigid fin structure let it maneuver with frightening precision. The tentacle-like appendages around its mouth serve a dual purpose: detecting nearby motion and guiding prey directly toward its venomous strike. Despite its menacing design, Venospina Ferrata is rarely seen by divers due to its speed and elusive behavior.">
+                    <!-- Елементи каруселі -->
+                    <div class="carousel-item" data-depth="scale.width / 10.3" data-name="Venospina Ferrata" data-description="Venospina Ferrata is a venomous marine predator distinguished by its radial facial tendrils and needle-thin spines that jut from its head and dorsal ridge. These spines are not just for show — they are coated in a potent neurotoxin that paralyzes prey in seconds. With an explosive burst of speed, Venospina closes the distance to its target, stabs it with one of its barbs, and lets the venom do the rest. Victims often die before realizing they’ve been struck. Its hydrodynamic body and rigid fin structure let it maneuver with frightening precision. The tentacle-like appendages around its mouth serve a dual purpose: detecting nearby motion and guiding prey directly toward its venomous strike. Despite its menacing design, Venospina Ferrata is rarely seen by divers due to its speed and elusive behavior.">
                         <h2 class="title">Venospina Ferrata</h2>
                         <img src="images/7 withoutbg.png" class="carousel-image">
                         <p><span class="bold">Name:</span> <span class="medium">Venospina Ferrata</span></p>
                         <p><span class="bold">Habitat Depth:</span> <span class="medium">100–300 meters</span></p>
                         <p><span class="bold">Diet:</span> <span class="medium">Small fish, crustaceans, jellyfish</span></p>
                     </div>
-                    <div class="carousel-item" id="carousel-item2" data-depth="scale.width / 6.4" data-name="Puffonella lumae" data-description="This creature resembles a glowing soap bubble—spherical, semi-transparent, with inner pulses of shifting light. Puffonella moves by soft ripples across its membrane, producing a dim shimmer in the dark. Its gentle, deceptive form confuses predators, and in swarms, synchronized individuals can create a temporary field of visual darkness.">
+                    <div class="carousel-item" data-depth="scale.width / 6.4" data-name="Puffonella lumae" data-description="This creature resembles a glowing soap bubble—spherical, semi-transparent, with inner pulses of shifting light. Puffonella moves by soft ripples across its membrane, producing a dim shimmer in the dark. Its gentle, deceptive form confuses predators, and in swarms, synchronized individuals can create a temporary field of visual darkness.">
                         <h2 class="title">Puffonella lumae</h2>
                         <img src="images/11 withoutbg.png" class="carousel-image">
                         <p><span class="bold">Name:</span> <span class="medium">Puffonella lumae</span></p>
                         <p><span class="bold">Habitat Depth:</span> <span class="medium">200–500 meters</span></p>
                         <p><span class="bold">Diet:</span> <span class="medium">Microscopic organisms, bioluminescent plankton</span></p>
                     </div>
-                    <div class="carousel-item" id="carousel-item3" data-depth="scale.width / 5.3" data-name="Helicocris Vortema" data-description="A predator with a long, flexible body covered in sucker-tipped tentacles, capable of attaching itself to other sea creatures—including larger ones—and staying hidden for hours. It remains nearly invisible in the dark, either drifting or freezing in place to blend with the surroundings. When attacking, Helicocris emits a focused electromagnetic pulse that stuns prey. Its segmented structure enables sinuous, wave-like movements, making it an unpredictable and lethal hunter.">
+                    <div class="carousel-item" data-depth="scale.width / 5.3" data-name="Helicocris Vortema" data-description="A predator with a long, flexible body covered in sucker-tipped tentacles, capable of attaching itself to other sea creatures—including larger ones—and staying hidden for hours. It remains nearly invisible in the dark, either drifting or freezing in place to blend with the surroundings. When attacking, Helicocris emits a focused electromagnetic pulse that stuns prey. Its segmented structure enables sinuous, wave-like movements, making it an unpredictable and lethal hunter.">
                         <h2 class="title">Helicocris Vortema</h2>
                         <img src="images/8 withoutbg.png" class="carousel-image">
                         <p><span class="bold">Name:</span> <span class="medium">Helicocris Vortema</span></p>
                         <p><span class="bold">Habitat Depth:</span> <span class="medium">300–700 meters</span></p>
                         <p><span class="bold">Diet:</span> <span class="medium">Small fish, deep-sea worms, translucent mollusks</span></p>
                     </div>
-                    <div class="carousel-item" id="carousel-item4" data-depth="scale.width / 4" data-name="Abyssal Tentafish" data-description="нема дескріпшина">
+                    <div class="carousel-item" data-depth="scale.width / 4" data-name="Abyssal Tentafish" data-description="The Abyssal Tentafish is a mid-depth ambush predator, easily identified by the writhing tentacle-like appendages around its mouth. These sensitive structures allow it to detect even the faintest vibrations in the dark waters it inhabits. Its scales emit a dim, pulsing bioluminescence, subtly mimicking the glow of drifting plankton to lure prey into striking distance. Though not large, this creature is lightning-fast and alarmingly precise. With a single burst of speed, it can seize prey before it has a chance to flee. Its ability to subtly shift its glow color grants it camouflage among bioluminescent algae, making it nearly invisible until it attacks.">
                         <h2 class="title">Abyssal Tentafish</h2>
                         <img src="images/1 withoutbg.png" class="carousel-image">
                         <p><span class="bold">Name:</span> <span class="medium">Abyssal Tentafish</span></p>
                         <p><span class="bold">Habitat Depth:</span> <span class="medium">400–600 meters</span></p>
                         <p><span class="bold">Diet:</span> <span class="medium">Small fish, squids, crustaceans</span></p>
                     </div>
-                    <div class="carousel-item" id="carousel-item5" data-depth="scale.width / 3.2" data-name="Thalassoraptor Rex" data-description="Thalassoraptor Rex is a colossal predator, distinguished by its streamlined body and powerful limbs, which enable rapid acceleration during ambush attacks. Its robust jaw structure houses multiple rows of serrated teeth capable of slicing through thick muscle and bone. The elongated shape and high muscular density suggest this creature is built for sustained speed and endurance rather than short bursts. Despite its size, Thalassoraptor Rex is known for silent movement, aided by specialized skin ridges that reduce hydrodynamic drag. Some researchers speculate it may hunt in coordinated pairs or small groups, similar to certain dolphin species, increasing its efficiency against large prey.">
+                    <div class="carousel-item" data-depth="scale.width / 3.2" data-name="Thalassoraptor Rex" data-description="Thalassoraptor Rex is a colossal predator, distinguished by its streamlined body and powerful limbs, which enable rapid acceleration during ambush attacks. Its robust jaw structure houses multiple rows of serrated teeth capable of slicing through thick muscle and bone. The elongated shape and high muscular density suggest this creature is built for sustained speed and endurance rather than short bursts. Despite its size, Thalassoraptor Rex is known for silent movement, aided by specialized skin ridges that reduce hydrodynamic drag. Some researchers speculate it may hunt in coordinated pairs or small groups, similar to certain dolphin species, increasing its efficiency against large prey.">
                         <h2 class="title">Thalassoraptor Rex</h2>
                         <img src="images/10 withoutbg.png" class="carousel-image">
                         <p><span class="bold">Name:</span> <span class="medium">Thalassoraptor Rex</span></p>
                         <p><span class="bold">Habitat Depth:</span> <span class="medium">500–800 meters</span></p>
                         <p><span class="bold">Diet:</span> <span class="medium">Large fish, cephalopods, marine reptiles</span></p>
                     </div>
-                    <div class="carousel-item" id="carousel-item6" data-depth="scale.width / 2.7" data-name="Spiralis Piscis" data-description="нема дескріпшина">
+                    <div class="carousel-item" data-depth="scale.width / 2.7" data-name="Spiralis Piscis" data-description="Spiralis Piscis is a curious example of evolutionary armor and mobility. Its spiral-shaped dorsal shell, reminiscent of ancient ammonites, offers protection from predators while also acting as a defensive mechanism. When threatened, the fish can tuck in its fins, curl its body, and rapidly spin away along the seafloor. іBright blue luminescent fins extend from its flanks, serving as both warning display and distraction. These lights flicker in rhythmic pulses, confusing would-be predators and signaling distress to others of its kind.">
                         <h2 class="title">Spiralis Piscis</h2>
                         <img src="images/2 withoutbg.png" class="carousel-image">
                         <p><span class="bold">Name:</span> <span class="medium">Spiralis Piscis</span></p>
                         <p><span class="bold">Habitat Depth:</span> <span class="medium">600–900 meters</span></p>
                         <p><span class="bold">Diet:</span> <span class="medium">Small crustaceans, plankton, larval sea creatures</span></p>
                     </div>
-                    <div class="carousel-item" id="carousel-item7" data-depth="scale.width / 2.3" data-name="Luminocetus Radiatus" data-description="Luminocetus Radiatus is a bioluminescent marine predator known for the striking golden “petals” that bloom from its back. These petal-like appendages pulse with warm light, mimicking bioluminescent corals and luring curious prey close enough to be caught. The creature’s muscular, streamlined body allows it to accelerate rapidly and make sharp directional shifts, giving it a tactical advantage during hunts in low-visibility environments. Despite its size, Luminocetus Radiatus is incredibly agile. Its eyes are adapted to detect the faintest light, and its hearing is finely tuned to detect movement through vibrations in the water. When threatened, it emits a sudden burst of blinding bioluminescence and escapes with a sharp turn — a tactic that disorients predators long enough for a clean getaway.">
+                    <div class="carousel-item" data-depth="scale.width / 2.3" data-name="Luminocetus Radiatus" data-description="Luminocetus Radiatus is a bioluminescent marine predator known for the striking golden “petals” that bloom from its back. These petal-like appendages pulse with warm light, mimicking bioluminescent corals and luring curious prey close enough to be caught. The creature’s muscular, streamlined body allows it to accelerate rapidly and make sharp directional shifts, giving it a tactical advantage during hunts in low-visibility environments. Despite its size, Luminocetus Radiatus is incredibly agile. Its eyes are adapted to detect the faintest light, and its hearing is finely tuned to detect movement through vibrations in the water. When threatened, it emits a sudden burst of blinding bioluminescence and escapes with a sharp turn — a tactic that disorients predators long enough for a clean getaway.">
                         <h2 class="title">Luminocetus Radiatus</h2>
                         <img src="images/3 withoutbg.png" class="carousel-image">
                         <p><span class="bold">Name:</span> <span class="medium">Luminocetus Radiatus</span></p>
                         <p><span class="bold">Habitat Depth:</span> <span class="medium">700–1000 meters</span></p>
                         <p><span class="bold">Diet:</span> <span class="medium">Medium-sized fish, squids</span></p>
                     </div>
-                    <div class="carousel-item" id="carousel-item8" data-depth="scale.width / 2" data-name="Medustigma Noctilucens" data-description="Medustigma Noctilucens is a bioluminescent deep-sea jelly-like organism characterized by its dome-shaped bell and numerous long, filamentous tentacles. Its name derives from the faint light it emits — a mechanism believed to serve both in camouflage and in attracting prey in the aphotic depths of the ocean. Each tentacle is lined with thousands of stinging cells, capable of delivering neurotoxins that immobilize small organisms within milliseconds. Unlike typical jellyfish, M. Noctilucens exhibits a degree of directional movement, allowing it to hover steadily in midwater columns and intercept vertically migrating prey. It is also known for a unique behavior: when threatened, it contracts its bell to release a sudden pulse of light, disorienting predators long enough to escape.">
+                    <div class="carousel-item" data-depth="scale.width / 2" data-name="Medustigma Noctilucens" data-description="Medustigma Noctilucens is a bioluminescent deep-sea jelly-like organism characterized by its dome-shaped bell and numerous long, filamentous tentacles. Its name derives from the faint light it emits — a mechanism believed to serve both in camouflage and in attracting prey in the aphotic depths of the ocean. Each tentacle is lined with thousands of stinging cells, capable of delivering neurotoxins that immobilize small organisms within milliseconds. Unlike typical jellyfish, M. Noctilucens exhibits a degree of directional movement, allowing it to hover steadily in midwater columns and intercept vertically migrating prey. It is also known for a unique behavior: when threatened, it contracts its bell to release a sudden pulse of light, disorienting predators long enough to escape.">
                         <h2 class="title">Medustigma Noctilucens</h2>
                         <img src="images/9 withoutbg.png" class="carousel-image">
                         <p><span class="bold">Name:</span> <span class="medium">Medustigma Noctilucens</span></p>
                         <p><span class="bold">Habitat Depth:</span> <span class="medium">700–1400 meters</span></p>
                         <p><span class="bold">Diet:</span> <span class="medium">Microscopic plankton, small fish, and crustaceans</span></p>
                     </div>
-                    <div class="carousel-item" id="carousel-item9" data-depth="scale.width / 1.8" data-name="Gravimorax Abyssus" data-description="Gravimorax abyssus is a bulky, slow-moving creature adapted to extreme underwater pressure. Its skin is both flexible and incredibly durable, capable of withstanding immense forces. Its primary sensory organs—long facial tendrils—detect micro-vibrations in the surrounding water. Though typically sluggish, it can lunge rapidly to ambush prey. It likely communicates through deep-frequency pulses. When threatened, it releases a dense black fluid that disrupts a predator’s perception, creating a temporary veil of darkness to escape unseen.">
+                    <div class="carousel-item" data-depth="scale.width / 1.8" data-name="Gravimorax Abyssus" data-description="Gravimorax abyssus is a bulky, slow-moving creature adapted to extreme underwater pressure. Its skin is both flexible and incredibly durable, capable of withstanding immense forces. Its primary sensory organs—long facial tendrils—detect micro-vibrations in the surrounding water. Though typically sluggish, it can lunge rapidly to ambush prey. It likely communicates through deep-frequency pulses. When threatened, it releases a dense black fluid that disrupts a predator’s perception, creating a temporary veil of darkness to escape unseen.">
                         <h2 class="title">Gravimorax Abyssus</h2>
                         <img src="images/5 withoutbg.png" class="carousel-image">
                         <p><span class="bold">Name:</span> <span class="medium">Gravimorax Abyssus</span></p>
                         <p><span class="bold">Habitat Depth:</span> <span class="medium">800–1200 meters</span></p>
                         <p><span class="bold">Diet:</span> <span class="medium">Detritus, deep-sea fish, slow crustaceans</span></p>
                     </div>
-                    <div class="carousel-item" id="carousel-item10" data-depth="scale.width" data-name="Abyssodraco Ferox" data-description="нема дескріпшина">
+                    <div class="carousel-item" data-depth="scale.width" data-name="Abyssodraco Ferox" data-description="Abyssodraco Ferox is a deep-sea predator adapted to life in total darkness. Its dorsal fin emits a faint red glow, luring prey that mistake it for volcanic light. Long sensory whiskers detect subtle movements, allowing it to strike with deadly precision. Its body is armored and flexible, with rows of sharp teeth and an expandable stomach. This allows it to consume prey of varying sizes and survive long periods without food, making it highly efficient in the scarce ecosystems of the abyss.">
                         <h2 class="title">Abyssodraco Ferox</h2>
                         <img src="images/4 withoutbg.png" class="carousel-image">
                         <p><span class="bold">Name:</span> <span class="medium">Abyssodraco Ferox</span></p>
@@ -198,47 +216,65 @@
                 <img src="images/arrow-left.svg" class="btn-next">
             </div>
             <div class="line"><img src="images/line.svg"></div>
+            <!-- Опис активної риби -->
             <div class="carousel-description">
                 <h1></h1>
                 <p></p>
             </div>
         </div>
+        <!-- Сторінка рейтингу -->
         <div class="rating-bg">
             <div class="rating-content">
                 <h1>Top 5 Most Dangerous</br>Creatures of the Deep</h1>
                 <div class="rating-list">
-                    <div class="rating-item" id="item1">
+                    <!-- Елементи рейтингу -->
+                    <div class="rating-item">
                         <div class="first-row">
-                            <h1>1. Abyssodraco Ferox</h1>
+                            <h1 data-img="images/fish1.webp">1. Abyssodraco Ferox</h1>
                             <img src="images/pointer-down.svg">
                         </div>
-                        <div class="second-row"><p class="additional-info"></p></div>
+                        <div class="hover-popup">
+                            <img src="">
+                        </div>
+                        <div class="second-row"><p class="additional-info">With its sensory precision, deceptive glowing lure, and ability to survive long starvation periods, Abyssodraco Ferox is an apex opportunist. Its mix of ambush tactics, extreme resilience, and total adaptability make it one of the most dangerous and unpredictable predators of the deep ocean.</p></div>
                     </div>
-                    <div class="rating-item" id="item2">
+                    <div class="rating-item">
                         <div class="first-row">
-                            <h1>2. Thalassoraptor Rex</h1>
+                            <h1 data-img="images/main-foto.webp">2. Thalassoraptor Rex</h1>
                             <img src="images/pointer-down.svg">
+                        </div>
+                        <div class="hover-popup">
+                            <img src="">
                         </div>
                         <div class="second-row"><p class="additional-info">With its immense size, stealth approach, and razor-sharp teeth, Thalassoraptor Rex poses a serious threat to any marine creature within its range. Its ability to launch high-speed surprise attacks and its endurance in long chases make it one of the ocean's most formidable predators.</p></div>
                     </div>
-                    <div class="rating-item" id="item3">
+                    <div class="rating-item">
                         <div class="first-row">
-                            <h1>3. Venospina Ferrata</h1>
+                            <h1 data-img="images/Venospina Ferrata.png">3. Venospina Ferrata</h1>
                             <img src="images/pointer-down.svg">
+                        </div>
+                        <div class="hover-popup">
+                            <img src="">
                         </div>
                         <div class="second-row"><p class="additional-info">Unlike most predators that rely on brute force or deception, Venospina Ferrata is a precision killer. One sting is all it takes. It doesn’t chase — it intercepts. It doesn’t wrestle — it paralyzes. If you feel a sudden sting in shallow twilight waters, it’s probably already too late.</p></div>
                     </div>
-                    <div class="rating-item" id="item4">
+                    <div class="rating-item">
                         <div class="first-row">
-                            <h1>4. Medustigma Noctilucens</h1>
+                            <h1 data-img="images/Medustigma Noctilucens.webp">4. Medustigma Noctilucens</h1>
                             <img src="images/pointer-down.svg">
+                        </div>
+                        <div class="hover-popup">
+                            <img src="">
                         </div>
                         <div class="second-row"><p class="additional-info">Deceptively slow but lethally efficient, Medustigma Noctilucens uses its near-invisible tentacles and paralytic venom to silently eliminate unsuspecting prey. Its ability to disorient attackers with a flash of bioluminescence makes it a hidden threat in the deep sea.</p></div>
                     </div>
-                    <div class="rating-item" id="item5">
+                    <div class="rating-item">
                         <div class="first-row">
-                            <h1>5. Luminocetus Radiatus</h1>
+                            <h1 data-img="images/fish3.webp">5. Luminocetus Radiatus</h1>
                             <img src="images/pointer-down.svg">
+                        </div>
+                        <div class="hover-popup">
+                            <img src="">
                         </div>
                         <div class="second-row"><p class="additional-info">Deceptively slow but lethally efficient, Medustigma Noctilucens uses its near-invisible tentacles and paralytic venom to silently eliminate unsuspecting prey. Its ability to disorient attackers with a flash of bioluminescence makes it a hidden threat in the deep sea.</p></div>
                     </div>
@@ -246,11 +282,12 @@
             </div>
         </div>
     </main>
+    <!-- Футер сторінки -->
     <footer>
         <div class="footer-bg">
             <div class="footer-content">
                 <div class="social">
-                    <p>Designed and imagined by Pedko Stefania</p>
+                    <p>Explore a fictional world of ocean life created for entertainment :)</p>
                     <div class="links">
                         <div class="link link-inst"><img src="images/Instagram.svg"> <p>Instagram</p></div>
                         <div class="link link-copy"><img src="images/Phone.svg"> <p>123 456 78 90</p></div>
@@ -263,6 +300,7 @@
             </div>
         </div>
     </footer>
+    <!-- Підключення JavaScript -->
     <script src="MainPage.js"></script>
 </body>
 </html>

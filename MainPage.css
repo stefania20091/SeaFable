@@ -1,30 +1,35 @@
+/* Підключення шрифтів */
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Marcellus+SC&display=swap');
+/* Загальні стилі для body та html */
 body,html{
     font-family: "Manrope", "IBM Plex Mono", sans-serif;
     margin:0;
     padding: 0;
     width: 100%;
     height: 100%;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
+    overflow-x: hidden; /* Заборона горизонтального скролу */
+    scroll-behavior: smooth;  /* Плавний скрол */
 }
+/* Стилі для заголовка сторінки */
 header{
     position: absolute;;
     height: 70px;
     width:100%;
     z-index: 1000;
-    font-family: "Marcellus SC", serif;
+    font-family: "Marcellus SC", serif; /* Шрифт для заголовка */
 }
+/* Фон заголовка */
 .header-background{
     position:fixed;
     width: 100%;
     height: 70px;
     opacity: 30%;
-    background-color: rgba(217, 217, 217, 0.8);
-    backdrop-filter: blur(20px);
+    background-color: rgba(217, 217, 217, 0.8); /* Напівпрозорий фон */
+    backdrop-filter: blur(20px); /* Ефект розмиття */
 }
+/* Контейнер для контенту заголовка */
 .header-content{
     display: flex;
     position: fixed;
@@ -34,11 +39,12 @@ header{
     width: 100%;
     height: 70px;
 }
+/* Стилі для логотипу */
 .logo{
     display: flex;
     align-items: center;
     margin-left: 20px;
-    cursor: pointer;
+    cursor: pointer;  /* Вказівник миші */
 }
 .logo h1{
     font-size: 24px;
@@ -51,6 +57,7 @@ header{
     width: 47px;
     margin: 2px 0 0 0;
 }
+/* Стилі для навігації */
 nav {
     display: flex;
     align-items: center;
@@ -58,24 +65,25 @@ nav {
 }
 nav ul{
     display: flex;
-    list-style: none;
-    gap: 63px;
+    list-style: none; /* Видалення маркерів списку */
+    gap: 63px;  /* Відстань між пунктами меню */
     margin: 0;
     padding: 0;
     flex-wrap: nowrap;
 }
 nav a{
     position: relative;
-    text-decoration: none;
+    text-decoration: none;  /* Видалення підкреслення */
     font-family: "Manrope", sans-serif;
     color: #E9F6FD;
     font-weight: 300;
     font-size: 18px;
     cursor: pointer;
 }
+/* Спливаюче повідомлення */
 .popup{
     position: fixed;
-    right: -250px;
+    right: -260px; /* Початкове положення за межами екрана */
     bottom: 20px;
     width: 250px;
     height: 50px;
@@ -85,7 +93,7 @@ nav a{
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: right 0.5s ease-in-out;
+    transition: right 0.5s ease-in-out; /* Анімація появи */
     z-index: 1000;
 }
 .popup-text p{
@@ -96,16 +104,18 @@ nav a{
     width: 100%;
 }
 .popup.active {
-    right: 20px;
+    right: 20px; /* Позиція, коли повідомлення активне */
 }
+/* Вітальний банер */
 .beginning{
     position: relative;
-    height: 704px;
+    height: 100vh;
     background-image: url('images/main-foto.webp');
     background-size: cover;
     background-position: center;
     width: 100%;
 }
+/* Контент у банері */
 .content{
     display: flex;
     flex-direction: column;
@@ -114,7 +124,7 @@ nav a{
     width: 100%;
     position: absolute;
     text-align: center;
-    top:25%;
+    top:25%; /* Відступ зверху */
 }
 .content h1{
     font-family: "IMB Plex Mono", sans-serif;
@@ -152,7 +162,9 @@ nav a{
     background-color: rgba(255, 255, 255, 0.2);
     color:rgba(255, 255, 255, 1);
 }
+/* Основна частина з тваринами */
 .main-part-bg{
+    display: none;;
     position: relative;
     background-image: url(images/background2.jpg);
     background-size: cover;
@@ -166,12 +178,13 @@ nav a{
 .main-part-bg > *:first-child{
     margin-top: 60px;
 }
-
+/* Контейнер для інформації про риб */
 .fishes{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
+/* Інформація про риб */
 .fish-info{
     position: relative;
     width: 720px;
@@ -229,13 +242,14 @@ nav a{
 .card-wrapper.move-left {
     transform: translateX(-300px); 
 }
+/* Карточки риб */
 .card-wrapper {
     transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
-    opacity: 0; 
+    opacity: 0; /* Початково приховані */
 }
 .card-wrapper.show {
     transform: translateX(0);
-    opacity: 1;
+    opacity: 1; /* Показати */
 }
 .card{
     width: 445px;
@@ -247,6 +261,7 @@ nav a{
     padding: 30px 30px;
     box-shadow: 0px 10px 18px rgba(0,0,0, 0.55);
 }
+/* Темний фон для деяких карточок */
 .card.dark-card {
     background-color: #131F35; 
 }
@@ -282,22 +297,26 @@ nav a{
     display: flex;
     margin: 35px 0 35px 0;
 }
+/* Футер сторінки */
 footer{
+    display: none; /* Початково прихований */;
     height: 400px;
     width: 100%;
 }
+/* Фон футера */
 .footer-bg{
     position: relative;
     background-image: url(images/footer.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-size: cover; /* Масштабування зображення */
+    background-repeat: no-repeat; /* Заборона повторення зображення */
     background-position: center;
     width: 100%;
     height: 400px;
     overflow: hidden;
     padding: 75px 50px 50px 50px;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Включення відступів у розміри елемента */
 }
+/* Градієнт у верхній частині футера */
 .footer-bg::before {
     content: "";
     position: absolute;
@@ -310,11 +329,12 @@ footer{
     filter: blur(15px);
     pointer-events: none;
 }
+/* Контейнер для контенту футера */
 .footer-content{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between; /* Розподіл елементів по краях */
+    align-items: center; /* Вирівнювання елементів по центру */
     width: 100%;
     height: 250px
 }
@@ -338,37 +358,39 @@ footer{
     display: flex;
     flex-direction: row;
     align-items: center;
-    cursor: pointer;
+    cursor: pointer;  /* Вказівник миші */
 }
 .footer-right{
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end; 
+    justify-content: flex-end; /* Вирівнювання елементів праворуч */
+    align-items: flex-end;  /* Вирівнювання по нижньому краю */
     height: 100%;
 }
 .footer-right img{
-    margin-top: 80%;
-    margin-left: 20%;
+    margin-top: 80%; /* Відступ зверху */
+    margin-left: 20%; /* Відступ зліва */
 }
 .depth-content h1{
     font-family: "Manrope", sans-serif;
-    font-size: 28px;
+    font-size: 20px;
     font-weight: 400;
     color: #FFFFFF;
-    margin: 0;
+    margin: 0 0 10px 18px;
 }
+/* Фон для сторінки каталогу */
 .catalogue-bg{
-    display: none;
+    display: none; /* Початково прихований */
     position: relative;
-    background-image: url(images/secondbg.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image: url(images/secondbg.png); /* Фонове зображення */
+    background-size: cover; /* Масштабування зображення */
+    background-repeat: no-repeat; /* Заборона повторення зображення */
     width: 100%;
     height: auto;
     overflow: hidden;
-    padding: 110px 40px 70px 40px;
-    box-sizing: border-box;
+    padding: 75px 40px 70px 40px;
+    box-sizing: border-box; /* Включення відступів у розміри елемента */
 }
+/* Заголовок сторінки каталогу */
 .page-title{
     display: flex;
     font-family: "IMB Plex Mono", sans-serif;
@@ -379,32 +401,37 @@ footer{
     margin: 25px 0px 12px 0px;
     justify-content: center;
 }
+/* Контейнер для каруселі */
 .carousel-div{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: center; /* Центрування каруселі */
 }
+/* Кнопки для перемикання каруселі */
 .btn-prev{
     position:relative;
-    margin-right: 15px;
+    margin-right: 15px; /* Відступ праворуч */
 }
 .btn-next{
     position:relative;
-    margin-left: 15px;
+    margin-left: 15px; /* Відступ ліворуч */
 }
+/* Карусель */
 .carousel{
     display: flex;
     flex-direction: row;
     width: 1200px;
     gap: 30px;
-    overflow-x:auto;
-    overflow-y: hidden;
-    scrollbar-width: none;
-    scroll-snap-type: x mandatory;
+    overflow-x:auto; /* Горизонтальна прокрутка */
+    overflow-y: hidden; /* Заборона вертикальної прокрутки */
+    scrollbar-width: none; /* Приховування скролбару */
+    scroll-snap-type: x mandatory; /* Прив'язка до елементів під час прокрутки */
 }
+/* Приховування скролбару для браузерів WebKit */
 .carousel::-webkit-scrollbar {
     display: none; 
 }
+/* Елементи каруселі */
 .carousel-item{
     display: flex;
     flex-direction: column;
@@ -414,17 +441,18 @@ footer{
     padding: 20px 35px 20px 35px;
     margin: 20px 0 20px 0;
     background-color: rgba(217,217,217,0.07);
-    border-radius: 12px;
+    border-radius: 12px;  /* Закруглені кути */
     border: 1px solid rgba(255,255,255,0.25);
-    align-items: center;
-    text-align: left;
-    transition: box-shadow 0.3s ease-in-out;
+    align-items: center; /* Вирівнювання по центру */
+    text-align: left;  /* Текст вирівняний по лівому краю */
+    transition: box-shadow 0.3s ease-in-out; /* Анімація тіні */
 }
+/* Перший і останній елементи каруселі */
 .carousel-item:first-child{
-    margin-left: 20px;
+    margin-left: 20px;  /* Відступ зліва */
 }
 .carousel-item:last-child{
-    margin-right: 20px;
+    margin-right: 20px; /* Відступ праворуч */
 }
 .carousel-item::before{
     content: "";
@@ -436,19 +464,21 @@ footer{
     filter: blur(15px);
     pointer-events: none;
 }
+/* Заголовок елемента каруселі */
 .title{
     font-family: "IMB Plex Mono", sans-serif;
     font-size: 20px;
     font-weight: 600;
-    color: rgba(224,227,255,0.85);
+    color: rgba(224,227,255,0.85); /* Світлий текст */
     width: 100%;
     margin: 0 0 15px 0;
     text-align: left;
 }
+/* Зображення в каруселі */
 .carousel-image{
     width: 100%;
     height: 222px;
-    scroll-snap-align: center;
+    scroll-snap-align: center; /* Прив'язка до центру під час прокрутки */
 }
 .carousel-item p{
     color: rgba(224,227,255,0.85);
@@ -460,13 +490,14 @@ footer{
 .carousel-item p:nth-of-type(1), .carousel-item p:nth-of-type(2){
     margin-bottom: 7px;
 }
+/* Опис активного елемента каруселі */
 .carousel-description {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Елементи в стовпчик */
     justify-content: center;
     align-items: flex-start;
-    color: rgba(224,227,255,0.85);
-    text-align: left;
+    color: rgba(224,227,255,0.85); /* Світлий текст */
+    text-align: left; /* Вирівнювання по лівому краю */
     padding: 30px 70px;
     margin: 0 auto;
 }
@@ -484,7 +515,7 @@ footer{
 }
 .line{
     width: 100%;
-    margin: 50px auto;
+    margin: 30px 0 10px 0;
     display: flex;
     justify-content: center;
 }
@@ -503,23 +534,20 @@ footer{
 .scale img{
     width: 1300px;
 }
-.depth-content h1{
-    font-family: "Manrope", sans-serif;
-    font-size: 28px;
-    font-weight: 500;
-    color: #FFFFFF;
-}
+/* Фон для сторінки рейтингу */
 .rating-bg{
     position: relative;
-    background-image: url(images/rating.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
+    display: none;  /* Початково прихований */
+    background-image: url(images/rating.svg); /* Фонове зображення */
+    background-size: cover;  /* Масштабування зображення */
+    background-repeat: no-repeat; /* Заборона повторення зображення */
     width: 100%;
     height: auto;
     overflow: hidden;
-    padding: 100px 80px 90px 80px;
-    box-sizing: border-box;
+    padding: 75px 80px 90px 80px;
+    box-sizing: border-box; /* Включення відступів у розміри елемента */
 }
+/* Контент блоку рейтингу */
 .rating-content{
     color: #FFFFFF;
     font-family: "IMB Plex Mono", sans-serif;
@@ -527,13 +555,15 @@ footer{
     font-weight: 600;
     text-align: left;
 }
+/* Список рейтингу */
 .rating-list{
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Елементи в стовпчик */
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 30px; /* Відстань між елементами */
 }
+/* Елемент рейтингу */
 .rating-item{
     display: flex;
     flex-direction: column;
@@ -566,25 +596,73 @@ footer{
     width: 60px;
     height: 20px;
 }
+/* Перший рядок елемента рейтингу */
 .first-row{
     display: flex;
     position: relative;
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-between; /* Розподіл елементів по краях */
     align-items: center;
     margin: 10px 0 10px 0;
 }
+/* Додаткова інформація в рейтингу */
 .additional-info{
-    display: hidden;
+    display: hidden; /* Початково прихована */
     font-family: "Manrope", sans-serif;
     font-weight: 400;
     font-size: 16px;
     color: #FFFFFF;
     margin: 0;
 }
+/* Другий рядок елемента рейтингу */
 .second-row {
-    display: none;
+    display: none; /* Початково прихований */
     overflow: hidden; 
-    height: 0; 
+    height: 0;  /* Початково висота 0 */
     transition: height 0.5s ease-in-out;
+}
+/* Спливаюче зображення */
+.hover-popup img{
+    width: 250px;
+    height: 170px;
+}
+.hover-popup {
+    position: absolute;
+    visibility: hidden; /* Початково приховане */
+    left: 0;
+    top: 0;
+    z-index: 10;
+    opacity: 0; /* Прозоре */
+    transform: translateX(-10px); /* Зміщення вліво */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Анімація появи */
+    align-items: center;
+    background-color: rgba(224, 227, 255, 0.1);/* Напівпрозорий фон */
+    padding: 5px;
+    border: 1px solid rgba(202, 211, 255, 0.4); /* Напівпрозора рамка */
+    border-radius: 7px;
+}
+.hover-popup.active {
+    opacity: 1; /* Показати */
+    visibility: visible;
+    transform: translateX(0); /* Повернути на місце */
+}
+/* анімація відображення першої сторінки*/
+.loading-anim{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: #BCBECE;
+    z-index: 1000; /* Перекриття всіх інших елементів */
+    visibility: hidden; /* Початково приховане*/
+    transition: opacity 0.5s ease-in-out;
+}
+/* Перша частина аннімації */
+.loading-anim.active{
+    visibility: visible;
+    opacity: 1;
+}
+/* Друга частина анімації*/
+.loading-anim.unactive{
+    opacity: 0;
 }
